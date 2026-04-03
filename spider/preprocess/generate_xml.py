@@ -255,13 +255,13 @@ def main(
     with open(task_info_path) as f:
         task_info = json.load(f)
     right_convex_dir = task_info.get("right_object_convex_dir")
-    right_convex_dir = f"{dataset_dir}/{right_convex_dir}"
+    right_convex_dir = os.path.join(dataset_dir, right_convex_dir) if right_convex_dir else None
     left_convex_dir = task_info.get("left_object_convex_dir")
-    left_convex_dir = f"{dataset_dir}/{left_convex_dir}"
+    left_convex_dir = os.path.join(dataset_dir, left_convex_dir) if left_convex_dir else None
     right_mesh_dir = task_info.get("right_object_mesh_dir")
-    right_mesh_dir = f"{dataset_dir}/{right_mesh_dir}"
+    right_mesh_dir = os.path.join(dataset_dir, right_mesh_dir) if right_mesh_dir else None
     left_mesh_dir = task_info.get("left_object_mesh_dir")
-    left_mesh_dir = f"{dataset_dir}/{left_mesh_dir}"
+    left_mesh_dir = os.path.join(dataset_dir, left_mesh_dir) if left_mesh_dir else None
 
     # Visual meshes (non-colliding)
     right_visual_file = f"{right_mesh_dir}/visual.obj" if right_mesh_dir else None

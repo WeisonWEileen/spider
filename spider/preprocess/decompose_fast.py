@@ -140,10 +140,10 @@ def main(
             "right_object_mesh_dir" if hand == "right" else "left_object_mesh_dir"
         )
         mesh_dir = task_info.get(mesh_dir_key)
-        mesh_dir = f"{dataset_path}/{mesh_dir}"
         if not mesh_dir:
             logger.warning("No mesh_dir for {} hand; skipping.", hand)
             continue
+        mesh_dir = os.path.join(str(dataset_path), mesh_dir)
 
         mesh_path = Path(mesh_dir)
         input_file = mesh_path / "visual.obj"
