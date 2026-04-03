@@ -214,7 +214,6 @@ docs/.vitepress/cache/
 
 # private-robots
 spider/assets/robots/xhand_pro/
-spider/assets/robots/sharpa/
 
 # mujoco logs
 MJMODEL.TXT
@@ -226,3 +225,6 @@ example_video_data/
 example_video_data
 tmp_datasets/
 .claude/
+
+
+
