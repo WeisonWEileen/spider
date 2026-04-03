@@ -29,21 +29,6 @@ sed -i 's/from numpy import bool, int, float, complex, object, unicode, str, nan
   .venv/lib/python3.12/site-packages/chumpy/__init__.py
 ```
 
-### mujoco-warp 与 MuJoCo 3.5.x 兼容性
-MuJoCo 3.5.1 将 `ten_J` 改为密集矩阵，`mujoco-warp 0.0.1` 仍调用废弃的稀疏接口导致崩溃：
-```
-AttributeError: 'MjData' object has no attribute 'ten_J_rownnz'
-```
-**修复**（patch `.venv` 中的 mujoco_warp）：
-```python
-# 文件：.venv/lib/python3.12/site-packages/mujoco_warp/_src/io.py
-# 找到 if mujoco.mj_isSparse(mjm): 分支，将稀疏路径替换为：
-ten_J = mjd.ten_J.reshape((mjm.ntendon, mjm.nv))
-d.ten_J = wp.array(np.full((nworld, mjm.ntendon, mjm.nv), ten_J), dtype=float)
-```
-
----
-
 ## run.sh 变量设计
 
 `TASK` 变量需要是完整任务名（participant + scene），各预处理脚本的 `--task` 参数都用它：
