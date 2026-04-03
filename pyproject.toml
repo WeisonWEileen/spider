@@ -19,6 +19,7 @@ dependencies = [
   "imageio[ffmpeg]",
   "mediapy",
   "opencv-python",
+  "mujoco-warp @ git+https://github.com/google-deepmind/mujoco_warp.git",
   "newton[examples] @ git+https://github.com/newton-physics/newton.git",
   "rerun-sdk==0.26.2",
   "viser",
