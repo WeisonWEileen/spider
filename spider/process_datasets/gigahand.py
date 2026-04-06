@@ -388,6 +388,7 @@ def main(
     gigahand_path = Path(dataset_dir) / "raw" / "gigahand"
     # Compose identifiers
     task_id = f"{participant}-{scene}-{sequence_id}"
+    # import pdb; pdb.set_trace()
     try:
         data_id = int(sequence_id)
     except Exception:

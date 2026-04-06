@@ -102,8 +102,8 @@
                 <joint name="right_yaw_joint" pos="0 0 0" axis="0 0 1" class="rot_joint"/>
                 <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_hand_C_MC_visual" name="right_hand_C_MC_visual"/>
                 <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="0.79216 0.81961 0.93333 1" mesh="right_hand_C_MC" name="right_hand_C_MC"/>
-                <geom name="collision_hand_right_palm_0" type="box" size="0.025 0.035 0.045" pos="0 0 0.04" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" />
-                <site name="right_palm" pos="0 0 0" type="box" size="0.001 0.002 0.003" quat="1 0 0 0" />
+                <!-- <geom name="collision_hand_right_palm_0" type="box" size="0.025 0.035 0.045" pos="0 0 0.04" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" /> -->
+                <site name="right_palm" pos="0 0.003 0" type="box" size="0.001 0.002 0.003" quat="1 0 0 0" />
                 <body name="right_thumb_CMC_VL" pos="0.01 0.026 0.0212" quat="-2.59734e-06 0.707105 0.707108 -2.59735e-06">
                   <inertial pos="0 0 0" mass="1e-06" diaginertia="2e-12 2e-12 2e-12"/>
                   <joint name="right_thumb_CMC_FE" pos="0 0 0" axis="0 0 1" range="-0.1745 1.9199" class="CMC_joint"/>
@@ -122,7 +122,7 @@
                         <joint name="right_thumb_MCP_AA" pos="0 0 0" axis="0 0 1" range="-0.3491 0.3491" class="MCP_joint"/>
                         <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_thumb_PP_visual" name="right_thumb_PP_visual"/>
                         <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="0.79216 0.81961 0.93333 1" mesh="right_thumb_PP" name="right_thumb_PP"/>
-                        <geom name="collision_hand_right_thumb_1" type="capsule" fromto="0 0 0 0.035 0 0" size="0.010" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" />
+                        <!-- <geom name="collision_hand_right_thumb_1" type="capsule" fromto="0 0 0 0.035 0 0" size="0.010" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" /> -->
                         <body name="right_thumb_DP" pos="0.039 0 0" quat="0.707105 0.707108 0 0">
                           <inertial pos="0.009858 -0.0101251 0.00044685" quat="0.650084 0.202839 -0.647252 0.342507" mass="0.005987" diaginertia="8.79951e-07 8.08527e-07 2.50483e-07"/>
                           <joint name="right_thumb_IP" pos="0 0 0" axis="0 0 1" range="0 1.7453" class="PIP_joint"/>
@@ -130,10 +130,10 @@
                           <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="0.79216 0.81961 0.93333 1" mesh="right_thumb_DP" name="right_thumb_DP"/>
                           <geom quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.2 1 0.2 1" mesh="right_thumb_elastomer" name="right_thumb_elastomer_visual"/>
                           <geom quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="1" conaffinity="1" group="3" rgba="0.2 1 0.2 1" mesh="right_thumb_elastomer" name="right_thumb_elastomer" class="elastomer_geom"/>
-                          <geom name="collision_hand_right_thumb_0" type="capsule" fromto="0 0 0 0.018 0 0" size="0.009" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" />
-                          <site name="right_thumb_tip" pos="0.02 -0.001 0" />
-                          <site name="track_hand_right_thumb_tip" pos="0.02 -0.001 0" />
-                          <site name="trace_hand_right_thumb_tip" pos="0.02 -0.001 0" />
+                          <!-- <geom name="collision_hand_right_thumb_0" type="capsule" fromto="0 0 0 0.018 0 0" size="0.009" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" /> -->
+                          <site name="right_thumb_tip" pos="0.02 0.002 0" />
+                          <site name="track_hand_right_thumb_tip" pos="0.02 0.002 0" />
+                          <site name="trace_hand_right_thumb_tip" pos="0.02 0.002 0" />
                         </body>
                       </body>
                     </body>
@@ -149,7 +149,7 @@
                     <joint name="right_index_MCP_AA" pos="0 0 0" axis="0 0 1" range="-0.3491 0.3491" class="MCP_joint"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP_visual" name="right_index_PP_visual"/>
                     <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP" name="right_index_PP"/>
-                    <geom name="collision_hand_right_index_1" type="capsule" fromto="0 0 0 0.04 0 0" size="0.010" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" />
+                    <!-- <geom name="collision_hand_right_index_1" type="capsule" fromto="0 0 0 0.04 0 0" size="0.010" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" /> -->
                     <body name="right_index_MP" pos="0.047 0 0" quat="0.707105 0.707108 0 0">
                       <inertial pos="0.015316 -0.00138561 6.28778e-08" quat="-0.0196261 0.706839 0.0195184 0.706832" mass="0.02509" diaginertia="2.28516e-06 2.26758e-06 9.99868e-07"/>
                       <joint name="right_index_PIP" pos="0 0 0" axis="0 0 1" range="0 1.7453" class="PIP_joint"/>
@@ -162,10 +162,10 @@
                         <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="0.79216 0.81961 0.93333 1" mesh="right_DP" name="right_index_DP"/>
                         <geom quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.2 1 0.2 1" mesh="right_elastomer" name="right_index_elastomer_visual"/>
                         <geom quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="1" conaffinity="1" group="3" rgba="0.2 1 0.2 1" mesh="right_elastomer" name="right_index_elastomer" class="elastomer_geom"/>
-                        <geom name="collision_hand_right_index_0" type="capsule" fromto="0 0 0 0.015 0 0" size="0.008" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" />
-                        <site name="right_index_tip" pos="0.018 0 0" />
-                        <site name="track_hand_right_index_tip" pos="0.018 0 0" />
-                        <site name="trace_hand_right_index_tip" pos="0.018 0 0" />
+                        <!-- <geom name="collision_hand_right_index_0" type="capsule" fromto="0 0 0 0.015 0 0" size="0.008" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" /> -->
+                        <site name="right_index_tip" pos="0.018 0.003 0" />
+                        <site name="track_hand_right_index_tip" pos="0.018 0.003 0" />
+                        <site name="trace_hand_right_index_tip" pos="0.018 0.003 0" />
                       </body>
                     </body>
                   </body>
@@ -180,7 +180,7 @@
                     <joint name="right_middle_MCP_AA" pos="0 0 0" axis="0 0 1" range="-0.3491 0.3491" class="MCP_joint"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP_visual" name="right_middle_PP_visual"/>
                     <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP" name="right_middle_PP"/>
-                    <geom name="collision_hand_right_middle_1" type="capsule" fromto="0 0 0 0.04 0 0" size="0.010" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" />
+                    <!-- <geom name="collision_hand_right_middle_1" type="capsule" fromto="0 0 0 0.04 0 0" size="0.010" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" /> -->
                     <body name="right_middle_MP" pos="0.047 0 0" quat="0.707105 0.707108 0 0">
                       <inertial pos="0.015316 -0.00138561 6.28778e-08" quat="-0.0196261 0.706839 0.0195184 0.706832" mass="0.02509" diaginertia="2.28516e-06 2.26758e-06 9.99868e-07"/>
                       <joint name="right_middle_PIP" pos="0 0 0" axis="0 0 1" range="0 1.7453" class="PIP_joint"/>
@@ -193,10 +193,10 @@
                         <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="0.79216 0.81961 0.93333 1" mesh="right_DP" name="right_middle_DP"/>
                         <geom quat="0.5 0.5 -0.5 0.5" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.2 1 0.2 1" mesh="right_elastomer" name="right_middle_elastomer_visual"/>
                         <geom quat="0.5 0.5 -0.5 0.5" type="mesh" contype="1" conaffinity="1" group="3" rgba="0.2 1 0.2 1" mesh="right_elastomer" name="right_middle_elastomer" class="elastomer_geom"/>
-                        <geom name="collision_hand_right_middle_0" type="capsule" fromto="0 0 0 0.015 0 0" size="0.008" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" />
-                        <site name="right_middle_tip" pos="0.018 0 0" />
-                        <site name="track_hand_right_middle_tip" pos="0.018 0 0" />
-                        <site name="trace_hand_right_middle_tip" pos="0.018 0 0" />
+                        <!-- <geom name="collision_hand_right_middle_0" type="capsule" fromto="0 0 0 0.015 0 0" size="0.008" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" /> -->
+                        <site name="right_middle_tip" pos="0.018 0.003 0" />
+                        <site name="track_hand_right_middle_tip" pos="0.018 0.003 0" />
+                        <site name="trace_hand_right_middle_tip" pos="0.018 0.003 0" />
                       </body>
                     </body>
                   </body>
@@ -211,7 +211,7 @@
                     <joint name="right_ring_MCP_AA" pos="0 0 0" axis="0 0 1" range="-0.3491 0.3491" class="MCP_joint"/>
                     <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP_visual" name="right_ring_PP_visual"/>
                     <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP" name="right_ring_PP"/>
-                    <geom name="collision_hand_right_ring_1" type="capsule" fromto="0 0 0 0.04 0 0" size="0.010" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" />
+                    <!-- <geom name="collision_hand_right_ring_1" type="capsule" fromto="0 0 0 0.04 0 0" size="0.010" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" /> -->
                     <body name="right_ring_MP" pos="0.047 0 0" quat="0.707105 0.707108 0 0">
                       <inertial pos="0.015316 -0.00138561 6.28778e-08" quat="-0.0196261 0.706839 0.0195184 0.706832" mass="0.02509" diaginertia="2.28516e-06 2.26758e-06 9.99868e-07"/>
                       <joint name="right_ring_PIP" pos="0 0 0" axis="0 0 1" range="0 1.7453" class="PIP_joint"/>
@@ -224,10 +224,10 @@
                         <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="0.79216 0.81961 0.93333 1" mesh="right_DP" name="right_ring_DP"/>
                         <geom quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.2 1 0.2 1" mesh="right_elastomer" name="right_ring_elastomer_visual"/>
                         <geom quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="1" conaffinity="1" group="3" rgba="0.2 1 0.2 1" mesh="right_elastomer" name="right_ring_elastomer" class="elastomer_geom"/>
-                        <geom name="collision_hand_right_ring_0" type="capsule" fromto="0 0 0 0.015 0 0" size="0.008" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" />
-                        <site name="right_ring_tip" pos="0.018 0 0" />
-                        <site name="track_hand_right_ring_tip" pos="0.018 0 0" />
-                        <site name="trace_hand_right_ring_tip" pos="0.018 0 0" />
+                        <!-- <geom name="collision_hand_right_ring_0" type="capsule" fromto="0 0 0 0.015 0 0" size="0.008" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" /> -->
+                        <site name="right_ring_tip" pos="0.018 0.003 0" />
+                        <site name="track_hand_right_ring_tip" pos="0.018 0.003 0" />
+                        <site name="trace_hand_right_ring_tip" pos="0.018 0.003 0" />
                       </body>
                     </body>
                   </body>
@@ -247,7 +247,7 @@
                       <joint name="right_pinky_MCP_AA" pos="0 0 0" axis="0 0 1" range="-0.3491 0.3491" class="MCP_joint"/>
                       <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP_visual" name="right_pinky_PP_visual"/>
                       <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="0.79216 0.81961 0.93333 1" mesh="right_PP" name="right_pinky_PP"/>
-                      <geom name="collision_hand_right_pinky_1" type="capsule" fromto="0 0 0 0.04 0 0" size="0.010" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" />
+                      <!-- <geom name="collision_hand_right_pinky_1" type="capsule" fromto="0 0 0 0.04 0 0" size="0.010" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" /> -->
                       <body name="right_pinky_MP" pos="0.047 0 0" quat="0.707105 0.707108 0 0">
                         <inertial pos="0.015316 -0.00138561 6.28778e-08" quat="-0.0196261 0.706839 0.0195184 0.706832" mass="0.02509" diaginertia="2.28516e-06 2.26758e-06 9.99868e-07"/>
                         <joint name="right_pinky_PIP" pos="0 0 0" axis="0 0 1" range="0 1.7453" class="PIP_joint"/>
@@ -260,10 +260,10 @@
                           <geom type="mesh" contype="1" conaffinity="1" group="3" rgba="0.79216 0.81961 0.93333 1" mesh="right_DP" name="right_pinky_DP"/>
                           <geom quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0.1 1 0.2 1" mesh="right_elastomer" name="right_pinky_elastomer_visual"/>
                           <geom quat="0.499998 0.5 -0.5 0.500002" type="mesh" contype="1" conaffinity="1" group="3" rgba="0.1 1 0.2 1" mesh="right_elastomer" name="right_pinky_elastomer" class="elastomer_geom"/>
-                          <geom name="collision_hand_right_pinky_0" type="capsule" fromto="0 0 0 0.015 0 0" size="0.008" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" />
-                          <site name="right_pinky_tip" pos="0.018 0 0" />
-                          <site name="track_hand_right_pinky_tip" pos="0.018 0 0" />
-                          <site name="trace_hand_right_pinky_tip" pos="0.018 0 0" />
+                          <!-- <geom name="collision_hand_right_pinky_0" type="capsule" fromto="0 0 0 0.015 0 0" size="0.008" rgba="0 1 0 1" group="3" contype="1" conaffinity="1" /> -->
+                          <site name="right_pinky_tip" pos="0.018 0.003 0" />
+                          <site name="track_hand_right_pinky_tip" pos="0.018 0.003 0" />
+                          <site name="trace_hand_right_pinky_tip" pos="0.018 0.003 0" />
                         </body>
                       </body>
                     </body>
