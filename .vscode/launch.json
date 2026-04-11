@@ -11,6 +11,42 @@
             "cwd": "${workspaceFolder}"
         },
         {
+            "name": "run_mjwp: gigahand_act p52-instrument",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/examples/run_mjwp.py",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "+override=gigahand_act",
+                "task=p52-instrument",
+                "data_id=34",
+                "robot_type=sharpa",
+                "embodiment_type=bimanual",
+                "viewer=rerun",
+                "joint_noise_scale=0.05"
+            ]
+        },
+        {
+            "name": "detect_contact: p52-instrument",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/spider/preprocess/detect_contact.py",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "cwd": "${workspaceFolder}",
+            "args": [
+                "--task", "p52-instrument",
+                "--dataset-name", "gigahand",
+                "--data-id", "34",
+                "--embodiment-type", "bimanual",
+                // "--no-show-viewer"
+            ]
+        },
+        {
             "name": "Python: Checker Example",
             "type": "python",
             "request": "launch",

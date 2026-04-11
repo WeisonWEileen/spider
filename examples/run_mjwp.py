@@ -193,6 +193,7 @@ def main(config: Config):
     qpos_ref, qvel_ref, ctrl_ref, contact, contact_pos = load_data(
         config, config.data_path
     )
+    # import pdb; pdb.set_trace()
     if (
         config.contact_guidance
         and ctrl_ref.shape[1] != config.nu
@@ -316,6 +317,7 @@ def main(config: Config):
             ],
             dtype=np.float32,
         )
+        # import pdb; pdb.set_trace()
         for i in range(config.max_num_iterations):
             decay = float(config.guidance_decay_ratio) ** i
             kp_i = base_kp * decay

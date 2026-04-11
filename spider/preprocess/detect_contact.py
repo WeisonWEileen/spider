@@ -34,7 +34,7 @@ def main(
     data_id: int = 0,
     show_viewer: bool = True,
     save_video: bool = False,
-    plot_contact: bool = False,
+    plot_contact: bool = True,
     ref_dt: float = 0.02,
 ):
     dataset_dir = os.path.abspath(dataset_dir)
@@ -383,15 +383,15 @@ def main(
                 avg_contact_pos = np.zeros((Ncontact, 3))
                 std_contact_pos = np.zeros((Ncontact, 3))
                 for i in range(Ncontact):
-                    cnt = 0
+                    contact_count = 0
                     contact_pos_list = []
                     for j in range(N):
                         if contact_seq[j, i]:
                             avg_contact_pos[i, :] += contact_pos[j, i, :]
                             contact_pos_list.append(contact_pos[j, i, :])
-                            cnt += 1
-                    if cnt > 0:
-                        avg_contact_pos[i, :] /= cnt
+                            contact_count += 1
+                    if contact_count > 0:
+                        avg_contact_pos[i, :] /= contact_count
                         contact_pos_list = np.array(contact_pos_list)
                         std_contact_pos[i, :] = np.std(contact_pos_list, axis=0)
                 for i in range(Ncontact):
